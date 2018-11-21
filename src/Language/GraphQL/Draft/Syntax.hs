@@ -6,7 +6,6 @@
 {-# LANGUAGE LambdaCase                 #-}
 {-# LANGUAGE OverloadedStrings          #-}
 {-# LANGUAGE RankNTypes                 #-}
-{-# LANGUAGE TemplateHaskell            #-}
 
 -- | Description: The GraphQL AST
 module Language.GraphQL.Draft.Syntax
@@ -167,9 +166,9 @@ instance Hashable OperationType
 data SchemaDocument
   = SchemaDocument
   { _sdTypes            :: ![TypeDefinition]
-  , _sdQueryRoot        :: !NamedType
-  , _sdMutationRoot     :: !(Maybe NamedType)
-  , _sdSubscriptionRoot :: !(Maybe NamedType)
+  --, _sdQueryRoot        :: !NamedType
+  --, _sdMutationRoot     :: !(Maybe NamedType)
+  --, _sdSubscriptionRoot :: !(Maybe NamedType)
   } deriving (Ord, Show, Eq, Lift, Generic)
 
 instance Hashable SchemaDocument
